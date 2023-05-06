@@ -1,17 +1,69 @@
-/* Style for navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+body{
+     background-color: rgb(37, 37, 37);
+     background-image: cross-fade(black, grey, pink);
+}
+.sidenav {
+  height: 75%;
+  width: 250px;
+  position: fixed;
+  /* left: 2%; */
+  margin-left: 5%;
+  top: 15%;
+  background-color: #00dbbdc5;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: black;
+  text-align: center;
+  font-size: x-large;
+  float: left;
+}
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 35px;
+
+  color: #83f9e7c5;
+  display: block;
 }
 
-/* Style for main content */
-.main-content {
-    margin-top: 70px;
-    /* To account for the fixed navbar height */
-    padding: 20px;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
+
+
+.main {
+  margin-left: 200px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+img{
+     padding-left: 15px;
+     size: 50px;
+     width: 50px;
+     float: left;
+}
+
+
+#logocen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.w3-animate-fading{
+     animation:fading 5s forwards
+}
+@keyframes fading{
+     0%{opacity:0}50%{opacity:1}100%{opacity:1}
+}
+.w3-animate-left{
+     position:relative;animation:animateleft 0.4s
+}
+@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+
+
