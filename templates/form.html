@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splitwise User Registration and Login</title>
+  <link rel="stylesheet" type="text/css" href="/home/paridhi/Desktop/dyp-Hackathon-ISS/static/form.css">
+  <style>
+    /* Inline styles for error message */
+    .error {
+      color: red;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">GrouPay</h1>
+  <div class="container">
+    <h2>New Entry</h2>
+    <form id="entry-form">
+      <input type="date" id="date" placeholder="Date" required>
+      <input type="text" id="event" placeholder="Event" required>
+      <div id="paidByContainer">
+        <select id="paidBy" required>
+          <option value="" disabled selected>Amount Paid By</option>
+          <option value="Person 1">Person 1</option>
+          <option value="Person 2">Person 2</option>
+          <option value="Person 3">Person 3</option>
+          <option value="Person 4">Person 4</option>
+          <option value="Person 5">Person 5</option>
+          <option value="Person 6">Person 6</option>
+          <option value="Person 7">Person 7</option>
+          <option value="Person 8">Person 8</option>
+          <option value="Person 9">Person 9</option>
+          <option value="Person 10">Person 10</option>
+        </select>
+      </div>
+      <br>
+      <div id="groupMembersContainer"></div>
+      <button type="submit">Done</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("entry-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Registration logic goes here
+    });
+
+    document.getElementById("paidBy").addEventListener("change", function() {
+      var paidBy = this.value;
+      var groupMembersContainer = document.getElementById("groupMembersContainer");
+      groupMembersContainer.innerHTML = "";
+
+      var groupMembers = ["Person 1", "Person 2", "Person 3", "Person 4", "Person 5", "Person 6", "Person 7", "Person 8", "Person 9", "Person 10"];
+
+      if (paidBy !== "") {
+        var label = document.createElement("label");
+        label.textContent = "Group Members:";
+        groupMembersContainer.appendChild(label);
+        groupMembersContainer.appendChild(document.createElement("br"));
+      }
+
+      groupMembers.forEach(function(member) {
+        if (member !== paidBy) {
+          var checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.id = member.replace(" ", "").toLowerCase();
+          checkbox.name = "groupMembers";
+          checkbox.value = member;
+
+          var label = document.createElement("label");
+          label.setAttribute("for", checkbox.id);
+          label.textContent = member;
+
+          groupMembersContainer.appendChild(checkbox);
+          groupMembersContainer.appendChild(label);
+          groupMembersContainer.appendChild(document.createElement("br"));
+        }
+      });
+    });
+  </script>
+</body>
+</html>
