@@ -1,0 +1,17 @@
+/* Style for navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Style for main content */
+.main-content {
+    margin-top: 70px;
+    /* To account for the fixed navbar height */
+    padding: 20px;
+}
