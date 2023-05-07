@@ -53,8 +53,6 @@ select {
   transition: cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-
-
 label {
   display: block;
   margin-top: 15px;

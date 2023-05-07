@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Splitwise User Registration and Login</title>
+  <title>GrouPay New Entry</title>
   <link rel="stylesheet" type="text/css" href="../static/form.css">
   <style>
     /* Inline styles for error message */
@@ -11,6 +12,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1 class="title">GrouPay</h1>
   <div class="container">
@@ -40,53 +42,7 @@
     </form>
   </div>
 
-  <script>
-    document.getElementById("entry-form").addEventListener("submit", function(event) {
-      event.preventDefault();
-      // Registration logic goes here
-
-      window.location.href = "HomePage.html";
-      // Registration logic goes here
-    });
-
-    document.getElementById("paidBy").addEventListener("change", function() {
-      var paidBy = this.value;
-      var groupMembersContainer = document.getElementById("groupMembersContainer");
-      groupMembersContainer.innerHTML = "";
-
-      var groupMembers = ["Siya", "Diya", "Rohan", "Jay", "Virat", "Maaya", "Piya", "Aryan", "Meera", "Ashmi"];
-
-      if (paidBy !== "") {
-        var label = document.createElement("label");
-        label.textContent = "Group Members:";
-        groupMembersContainer.appendChild(label);
-        groupMembersContainer.appendChild(document.createElement("br"));
-      }
-
-      groupMembers.forEach(function(member) {
-        if (member !== paidBy) {
-          var container = document.createElement("div");
-          container.classList.add("checkbox-label"); // Add CSS class to the container
-
-          var checkbox = document.createElement("input");
-          checkbox.type = "checkbox";
-          checkbox.id = member.replace(" ", "").toLowerCase();
-          checkbox.name = "groupMembers";
-          checkbox.value = member;
-          container.appendChild(checkbox);
-
-          var label = document.createElement("label");
-          label.setAttribute("for", checkbox.id);
-          label.textContent = member;
-          container.appendChild(label);
-
-          groupMembersContainer.appendChild(container);
-        }
-      });
-    });
-  </script>
+  <script src="../static/form.js"></script>
 </body>
+
 </html>
-
-
-
