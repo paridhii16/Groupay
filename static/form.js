@@ -41,3 +41,36 @@ document.getElementById("paidBy").addEventListener("change", function () {
         }
     });
 });
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const entryForm = document.querySelector('#entry-form');
+    const submitBtn = entryForm.querySelector('button[type="submit"]');
+
+    submitBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // prevent the form from submitting
+
+        // perform form validation here
+
+        // redirect to homepage
+        window.location.href = '/';
+    });
+});

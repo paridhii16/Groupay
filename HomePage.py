@@ -10,6 +10,11 @@ def GroupPayHome():
     return render_template("HomePage.html")
 
 
+@GrouPayApp.route("/GrouPayEntry")
+def GroupPayEntry():
+    return render_template("form.html")
+
+
 @GrouPayApp.route("/form.html")
 def FormDataFetch():
     # fetching data from the JS page
