@@ -1,5 +1,7 @@
 body{
-  background-color: lightslategray;
+  background: linear-gradient(to top, rgb(135, 6, 94), rgb(56, 20, 48));
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 #logocen {
   display: flex;
