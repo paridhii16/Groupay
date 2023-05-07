@@ -41,6 +41,7 @@ h2 {
 
 input[type="date"],
 input[type="text"],
+input[type="number"],
 select {
   width: 80%;
   margin-left: 10%;
