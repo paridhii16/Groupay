@@ -5,23 +5,46 @@ import json
 GrouPayApp = Flask(__name__)
 
 
+# route for HomePage
 @GrouPayApp.route("/")
 def GroupPayHome():
     return render_template("HomePage.html")
 
 
+# route for NewEntryPage
 @GrouPayApp.route("/GrouPayEntry")
 def GroupPayEntry():
     return render_template("form.html")
 
 
-@GrouPayApp.route("/form.html")
+# route for TallyPage
+@GrouPayApp.route("/GrouPayTally")
+def GroupPayTally():
+    return render_template("TallyPage.html")
+
+
+# route for fetching data from NewEntryPage
+@GrouPayApp.route("/form.html", methods=["POST"])
 def FormDataFetch():
     # fetching data from the JS page
+    data = request.get_json()
+
+    # establishing connection
     con = sqlite3.connect("Group.db")
     c = con.cursor()
     c.execute("SELECT * FROM Group")
     rows = c.fetchall()
+    con.close()
+
+    # checking for the presence of the table for the Group
+    c.execute(
+        "CREATE TABLE IF NOT EXISTS GROUP (EntryID varchar(50) primary key, Payer varchar(20), Siya int, Diya int, Rohan int, Jay int, Virat int, Maaya int, Piya int, Aryan int, Meera int, Ashmi int)"
+    )
+
+    # creating new entry
+    c.execute("INSERT INTO Group VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+
+    con.commit()
     con.close()
 
 

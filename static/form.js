@@ -1,8 +1,13 @@
 document.getElementById("entry-form").addEventListener("submit", function (event) {
     event.preventDefault();
-    // Registration logic goes here
+    var successMessage = document.createElement("div");
+    successMessage.classList.add("success-message");
+    successMessage.innerHTML = "<p>Successfully created new entry!</p>";
+    document.body.appendChild(successMessage);
 
-    window.location.href = "HomePage.html";
+    setTimeout(function () {
+        window.location.href = "HomePage.html";
+    }, 5000)
     // Registration logic goes here
 });
 
@@ -42,23 +47,18 @@ document.getElementById("paidBy").addEventListener("change", function () {
     });
 });
 
-/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -74,3 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/';
     });
 });
+
+/* */
+
+// creating the POST request part

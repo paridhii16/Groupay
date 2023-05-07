@@ -1,0 +1,144 @@
+body{ 
+  background: linear-gradient(to top, rgb(135, 6, 94), rgb(56, 20, 48));
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+logo{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+logo img{
+     width: 38%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+main_logo img {
+  width: 17%;
+  height: auto;
+  margin-left: 2%;
+  margin-top: 2%;
+  
+}
+
+
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 4%;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1%;
+  color:rgb(199, 190, 190);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+select {
+  width: 40%;
+  margin-left: 30%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(247, 244, 244);
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: rgb(53, 202, 98);
+  color: rgb(6, 6, 6);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#transactionDetails {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.left_nav a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.left_nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.left_nav a:hover::before {
+  left: 5%;
+  width: 90%;
+}
+
+
+.container a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+
+
+
+
+.left_nav{
+
+  float: left;
+  margin-left: 5%;
+  margin-top: 13%;
+  margin-right: -15%;
+  height: 50%;
+  width: 10%;
+  text-align: center;
+  font-size: 35px;
+  background: radial-gradient(circle, rgb(253, 106, 131), rgb(140, 0, 98) );
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 20px;
+  font-weight: bolder;
+  color: aliceblue;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

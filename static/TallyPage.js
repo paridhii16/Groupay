@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const tallyPageLink = document.querySelector('#tallyPageLink');
-    tallyPageLink.addEventListener('click', (event) => {
+    const homePageLink = document.querySelector('#homePageLink');
+    homePageLink.addEventListener('click', (event) => {
         event.preventDefault(); // prevent the link from triggering a page reload
-        window.location.href = '/GrouPayTally';
+        window.location.href = '/';
     });
 });
