@@ -1,17 +1,11 @@
-# dyp-Hackathon-ISS
+# GrouPay Splitwise
 
-Project name : GrouPay
+GrouPay Splitwise is a Flask-based web application designed to simplify shared expense management within a group of 10 people. The application allows users to track and settle debts among group members efficiently.
 
-Team members : 
-	
-	* Dx
-	* Yeshu
-	* Paridhi
-	
-Features:
-	
-	-> creating n-number of new transaction/payment splits under the same group
-	
-	-> option to add only certain members of the group for a certain transaction
-	
-	-> 
+## Features
+
+- **Homepage:** Provides an overview of the application and its functionalities.
+
+- **New Entry Page:** Allows users to log new expenses and update shared costs among group members.
+
+- **Tally Page:** Generates a summary of pending amounts between two selected individuals, showcasing who owes how much.
